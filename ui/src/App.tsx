@@ -37,6 +37,11 @@ import EditDeviceProfileTemplate from "./views/device-profile-templates/EditDevi
 import ListRegions from "./views/regions/ListRegions";
 import RegionDetails from "./views/regions/RegionDetails";
 
+// network server integrations
+import NetworkServerIntegrations from "./views/network-server/NetworkServerIntegrations";
+import CreateNetworkServerInfluxDbIntegration from "./views/network-server/integrations/CreateNetworkServerInfluxDbIntegration";
+import EditNetworkServerInfluxDbIntegration from "./views/network-server/integrations/EditNetworkServerInfluxDbIntegration";
+
 // stores
 import SessionStore from "./stores/SessionStore";
 
@@ -100,6 +105,10 @@ function App() {
 
                   <Route path="/regions" element={<ListRegions />} />
                   <Route path="/regions/:id" element={<RegionDetails />} />
+
+                  <Route path="/integrations" element={<NetworkServerIntegrations />} />
+                  <Route path="/integrations/influxdb/create" element={<CreateNetworkServerInfluxDbIntegration />} />
+                  <Route path="/integrations/influxdb/edit" element={<EditNetworkServerInfluxDbIntegration />} />
                 </Routes>
               </Layout.Content>
             </Layout>

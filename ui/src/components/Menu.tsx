@@ -12,6 +12,7 @@ import {
   ControlOutlined,
   AppstoreOutlined,
   CompassOutlined,
+  ApiOutlined,
 } from "@ant-design/icons";
 
 import {
@@ -105,6 +106,11 @@ function SideMenu() {
       setSelectedKey("ns-regions");
     }
 
+    // ns integrations
+    if (/\/integrations.*/g.exec(path)) {
+      setSelectedKey("ns-integrations");
+    }
+
     // tenant dashboard
     if (/\/tenants\/[\w-]{36}/g.exec(path)) {
       setSelectedKey("tenant-dashboard");
@@ -193,6 +199,11 @@ function SideMenu() {
           key: "ns-regions",
           icon: <CompassOutlined />,
           label: <Link to="/regions">Regions</Link>,
+        },
+        {
+          key: "ns-integrations",
+          icon: <ApiOutlined />,
+          label: <Link to="/integrations">Integrations</Link>,
         },
       ],
     });
