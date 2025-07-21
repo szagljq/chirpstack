@@ -1,7 +1,6 @@
 import React from "react";
-import { Space, Breadcrumb, Card, Row, Typography, Divider } from "antd";
+import { Space, Breadcrumb, Card, Row, Typography } from "antd";
 import { PageHeader } from "@ant-design/pro-layout";
-import { ApiOutlined } from "@ant-design/icons";
 
 import NetworkServerInfluxDbCard from "./integrations/NetworkServerInfluxDbCard";
 
